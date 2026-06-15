@@ -46,36 +46,40 @@ export default function HowToBuy() {
   return (
     <div className="w-full bg-black flex flex-col overflow-visible select-none">
       <section className="relative w-full flex flex-col items-center bg-black py-12 md:py-20">
-       <img src={bg4Img} alt="Night Scene Background" className="absolute inset-0 w-full h-full object-cover z-0" /> 
+        <img src={bg4Img} alt="Night Scene Background" className="absolute inset-0 w-full h-full object-cover z-0" /> 
         
-
         <div className="relative w-full max-w-5xl aspect-[16/10] md:aspect-[16/9] mx-auto border border-zinc-900 rounded-lg overflow-hidden shadow-[0_0_60px_rgba(147,51,234,0.15)]">
-          <div className="mb-6 text-center z-20 px-4">
-          <h2 className="text-2xl md:text-4xl font-extrabold text-purple-500 tracking-wider font-mono">
-            {stepData[currentSlide].title}
-          </h2>
-          <p className="text-zinc-400 text-xs md:text-sm mt-2 max-w-xl mx-auto min-h-[32px]">
-            {stepData[currentSlide].text}
-          </p>
-        </div>
-        
+          
+          {/* FIXED: Positioned absolutely at the top so it doesn't push down layout content */}
+          <div className="absolute top-6 left-1/2 -translate-x-1/2 w-full text-center z-20 px-4">
+            <h2 className="text-2xl md:text-4xl font-extrabold text-purple-500 tracking-wider font-mono">
+              {stepData[currentSlide].title}
+            </h2>
+            <p className="text-zinc-400 text-xs md:text-sm mt-2 max-w-xl mx-auto min-h-[32px]">
+              {stepData[currentSlide].text}
+            </p>
+          </div>
 
           <div className="absolute inset-0 z-10 w-full h-full">
+            {/* Pumpkins Left */}
             <div className="absolute bottom-[6%] left-[4%] w-[12%] flex items-end gap-1">
               <img src={bigPumpkinImg} alt="Big Pumpkin" className="w-[60%] h-auto" />
               <img src={smallPumpkinImg} alt="Small Pumpkin" className="w-[40%] h-auto" />
             </div>
 
+            {/* Pumpkins Center Path */}
             <img src={bigPumpkinImg} alt="Big Pumpkin" className="absolute bottom-[18%] left-[34%] w-[7%] h-auto" />
             <img src={smallPumpkinImg} alt="Small Pumpkin" className="absolute bottom-[16%] left-[41%] w-[4.5%] h-auto" />
 
+            {/* Pumpkins Right */}
             <div className="absolute bottom-[10%] right-[6%] w-[10%] flex items-end gap-0.5">
               <img src={smallPumpkinImg} alt="Small Pumpkin" className="w-[40%] h-auto" />
               <img src={bigPumpkinImg} alt="Big Pumpkin" className="w-[60%] h-auto" />
             </div>
 
+            {/* Step 1: Ghost perfectly floating over the road right side */}
             {currentSlide === 1 && (
-              <div className="absolute bottom-[18%] left-[48%] -translate-x-1/2 w-[14%] h-auto animate-float-slow transition-all duration-700">
+              <div className="absolute bottom-[35%] left-[67%] -translate-x-1/2 w-[5%] h-auto animate-float-slow transition-all duration-700">
                 <img src={ghostImg} alt="Ghost Asset" className="w-full h-auto" />
               </div>
             )}
@@ -142,6 +146,7 @@ export default function HowToBuy() {
             )}
           </div>
 
+          {/* Dots Indicators */}
           <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2 z-30">
             {[1, 2, 3, 4, 5, 6].map((idx) => (
               <div

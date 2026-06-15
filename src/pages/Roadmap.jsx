@@ -17,10 +17,10 @@ const phaseContent = {
 };
 
 const boardPosition = {
-  2: { top: "21%", left: "39.7%" },
-  3: { top: "32%", left: "39.8%" },
-  4: { top: "42%", left: "39.7%" },
-  5: { top: "53.4%", left: "39.8%" },
+  2: { top: "16%", left: "39.7%" },
+  3: { top: "27%", left: "39.8%" },
+  4: { top: "37%", left: "39.7%" },
+  5: { top: "48.4%", left: "39.8%" },
 };
 
 export default function Roadmap() {
@@ -47,16 +47,16 @@ export default function Roadmap() {
       <section className="relative w-full bg-black overflow-visible">
   <div className="relative w-full min-h-screen overflow-visible">
     <img
-      src={bg3Img}
-      alt=""
-      className="absolute inset-0 w-full h-full object-cover"
-    />
+  src={bg3Img}
+  alt=""
+  className="absolute inset-0 w-full h-full object-cover object-bottom"
+/>
 
           <div className="absolute z-10 w-full h-full flex items-start justify-center">
             <img
               src={rmTreeImg}
               alt="Wooden signpost"
-              className="absolute top-[15%] left-1/2 -translate-x-1/2 w-[45%] sm:w-[38%] md:w-[34%] h-auto object-contain"
+              className="absolute top-[10%] left-1/2 -translate-x-1/2 w-[45%] sm:w-[38%] md:w-[34%] h-auto object-contain"
             />
 
             {currentSlide > 1 && (
@@ -78,21 +78,35 @@ export default function Roadmap() {
                 </div>
               </div>
             )}
+
+            
           </div>
 
-          <div className="absolute bottom-[7%] left-[63%] w-[9%] z-40 pointer-events-none">
+          <div className="absolute bottom-[12%] left-[63%] w-[9%] z-40 pointer-events-none">
             <img src={animal1} alt="Animal 1" className="w-full h-auto" />
           </div>
 
-          <div className="absolute bottom-[2%] left-[52%] w-[11%] z-20 pointer-events-none" style={{ animation: "floatSlow 4s ease-in-out infinite" }}>
+          <div className="absolute bottom-[7%] left-[52%] w-[11%] z-20 pointer-events-none" style={{ animation: "floatSlow 4s ease-in-out infinite" }}>
             <img src={centerGhostImg} alt="Ghost" className="w-full h-auto" />
           </div>
 
-          <div className="absolute bottom-[12%] left-[60%] w-[11%] z-20 pointer-events-none">
-            <img src={animal2} alt="Animal 2" className="w-full h-auto" />
-          </div>
+        {/* Animal 2 */}
+<div className="absolute bottom-[17%] left-[60%] w-[11%] z-20 pointer-events-none">
+  <img src={animal2} alt="Animal 2" className="w-full h-auto" />
+</div>
 
-          <div className="absolute bottom-[10%] left-[66%] w-[7%] z-20 pointer-events-none">
+{/* Animal 3 (flipped version) */}
+<div className="absolute bottom-[17%] left-[28%] w-[11%] z-20 pointer-events-none">
+  <img
+    src={animal2}
+    alt="Animal 2 flipped"
+    className="w-full h-auto scale-x-[-1]"
+  />
+</div>
+
+          
+
+          <div className="absolute bottom-[8%] left-[28%] w-[7%] z-20 pointer-events-none">
             <img src={animal3} alt="Animal 3" className="w-full h-auto" />
           </div>
 

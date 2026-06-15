@@ -99,7 +99,10 @@ export default function FAQ() {
                     : "opacity-75 scale-95"
                 }`}
               >
-                <img src={ghostTop} alt="Question Ghost" className="w-full h-auto" />
+                <img
+  src={ghostTop}
+  className="absolute left-1/2 -translate-x-1/2 -top-10 w-[130px] z-0"
+/>
               </div>
 
               {/* CENTER COMPONENT: Dialogue Text Container Box */}

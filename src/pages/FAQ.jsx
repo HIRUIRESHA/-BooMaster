@@ -56,19 +56,22 @@ export default function FAQ() {
   };
 
   return (
-    <div className="relative w-full min-h-screen flex justify-center select-none overflow-visible">
+    <div className="relative w-full min-h-screen flex items-center justify-center select-none overflow-hidden py-24">
       {/* Absolute Structural Wrapper Context */}
       <div className="relative w-full max-w-[1500px] px-4">
         
-        {/* Top Feature Accent Ghost emerging out of the frame */}
-        <img
-          src={ghostTop}
-          alt=""
-          className="absolute left-1/2 -translate-x-1/2 -top-20 w-[130px] z-30 pointer-events-none drop-shadow-[0_-5px_15px_rgba(168,85,247,0.2)]"
-        />
+        {/* FIX: Top Feature Accent Ghost placed BEHIND the core screen layer */}
+        <div className="absolute left-1/2 -translate-x-1/2 -top-21 w-[130px] h-[130px] z-0 pointer-events-none overflow-hidden">
+          <img
+            src={ghostTop}
+            alt=""
+            className="w-full h-auto ]"
+          />
+        </div>
 
         {/* Core Screen Landscape Area (1808 x 908 Aspect Ratio Profile) */}
-        <div className="relative h-[580px] md:h-[650px] rounded-2xl overflow-hidden border border-zinc-900 shadow-[0_0_50px_rgba(147,51,234,0.1)]">
+        {/* Changed z-index to z-10 so it sits firmly on top of the emerging ghost background */}
+        <div className="relative z-10 h-[580px] md:h-[650px] rounded-2xl overflow-hidden border border-zinc-900 shadow-[0_0_50px_rgba(147,51,234,0.1)]">
           
           {/* Layer 1: Environmental Art Canvas Backing */}
           <img
@@ -81,15 +84,15 @@ export default function FAQ() {
           <div className="absolute inset-0 bg-black/40 z-10" />
 
           {/* Layer 3: Subtle floating ghost centered inside the upper canvas frame */}
-          <img
+          {/* <img
             src={ghostMid}
             alt=""
             className="absolute top-6 left-1/2 -translate-x-1/2 w-[85px] z-20 opacity-90 animate-subtle-float"
-          />
+          /> */}
 
           {/* Layer 4: Interactive Interactive Dynamic Characters & Dialogue Box */}
           <div className="absolute inset-0 w-full h-full flex items-end justify-center pb-20 md:pb-24 z-20 px-6 md:px-12">
-            <div className="w-full max-w-5xl flex items-end justify-between relative">
+            <div className="w-full max-w-5xl flex items-end justify-between relative gap-10">
               
               {/* LEFT CHARACTER: Asking the Question */}
               <div 
@@ -100,14 +103,18 @@ export default function FAQ() {
                 }`}
               >
                 <img
-  src={ghostTop}
-  className="absolute left-1/2 -translate-x-1/2 -top-10 w-[130px] z-0"
-/>
+                  src={ghostMid}
+                  alt="Question Ghost"
+                  className="w-full h-auto"
+                />
               </div>
 
               {/* CENTER COMPONENT: Dialogue Text Container Box */}
-              <div className="w-[60%] relative aspect-[716/172] flex items-center justify-center px-6 md:px-12 transform transition-all duration-500 hover:scale-[1.01]">
-                {/* Stone Text Frame Panel Image asset */}
+<div
+  className={`w-[60%] relative aspect-[716/172] flex items-center justify-center px-6 md:px-12 transition-all duration-700 transform ${
+    isQuestionPhase ? "-translate-x-16" : "translate-x-16"
+  }`}
+>                {/* Stone Text Frame Panel Image asset */}
                 <img 
                   src={questionBarImg} 
                   alt="" 
@@ -133,7 +140,7 @@ export default function FAQ() {
                     : "opacity-75 scale-95"
                 }`}
               >
-                <img src={ghostTop} alt="Answer Ghost" className="w-full h-auto" />
+                <img src={ghostMid} alt="Answer Ghost" className="w-full h-auto" />
               </div>
 
             </div>

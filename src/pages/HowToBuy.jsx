@@ -16,147 +16,188 @@ export default function HowToBuy() {
     return () => clearInterval(timer);
   }, []);
 
-  const stepData = {
-    1: {
-      title: "Step 1: Create Wallet",
-      text: "Download and set up your phantom ghost wallet extension or app. Keep your recovery phrases completely safe and private."
-    },
-    2: {
-      title: "Step 2: Add Funds",
-      text: "Purchase SOL directly inside your wallet or deposit it from an exchange using your secure public wallet address address."
-    },
-    3: {
-      title: "Step 3: Find Exchange",
-      text: "Head over to Raydium or Jupiter decentralized exchange platfrom and safely connect your loaded phantom wallet."
-    },
-    4: {
-      title: "Step 4: Set Price",
-      text: "Paste the official token address into the search field, adjust your slippage settings to make sure your transaction goes through smoothly."
-    },
-    5: {
-      title: "Step 5: Swap Tokens",
-      text: "Enter the amount of SOL you wish to convert, review your transaction breakdown, and confirm the trade execution."
-    },
-    6: {
-      title: "Step 6: Tokens Received",
-      text: "Congratulations! Transaction complete. The $BOO tokens are now resting safely inside your decentralized ghost asset wallet."
-    }
-  };
-
   return (
     <div className="w-full bg-black flex flex-col overflow-visible select-none">
-      <section className="relative w-full flex flex-col items-center bg-black py-12 md:py-20">
+      <section className="relative w-full h-screen flex flex-col items-center justify-center overflow-hidden">
+        {/* Background Scene */}
         <img src={bg4Img} alt="Night Scene Background" className="absolute inset-0 w-full h-full object-cover z-0" /> 
         
-        <div className="relative w-full max-w-5xl aspect-[16/10] md:aspect-[16/9] mx-auto border border-zinc-900 rounded-lg overflow-hidden shadow-[0_0_60px_rgba(147,51,234,0.15)]">
-          
-          {/* FIXED: Positioned absolutely at the top so it doesn't push down layout content */}
-          <div className="absolute top-6 left-1/2 -translate-x-1/2 w-full text-center z-20 px-4">
-            <h2 className="text-2xl md:text-4xl font-extrabold text-purple-500 tracking-wider font-mono">
-              {stepData[currentSlide].title}
-            </h2>
-            <p className="text-zinc-400 text-xs md:text-sm mt-2 max-w-xl mx-auto min-h-[32px]">
-              {stepData[currentSlide].text}
-            </p>
-          </div>
+        {/* Active Elements Canvas */}
+        <div className="absolute inset-0 z-10 w-full h-full">
 
-          <div className="absolute inset-0 z-10 w-full h-full">
-            {/* Pumpkins Left */}
-            <div className="absolute bottom-[6%] left-[4%] w-[12%] flex items-end gap-1">
-              <img src={bigPumpkinImg} alt="Big Pumpkin" className="w-[60%] h-auto" />
-              <img src={smallPumpkinImg} alt="Small Pumpkin" className="w-[40%] h-auto" />
-            </div>
-
-            {/* Pumpkins Center Path */}
-            <img src={bigPumpkinImg} alt="Big Pumpkin" className="absolute bottom-[18%] left-[34%] w-[7%] h-auto" />
-            <img src={smallPumpkinImg} alt="Small Pumpkin" className="absolute bottom-[16%] left-[41%] w-[4.5%] h-auto" />
-
-            {/* Pumpkins Right */}
-            <div className="absolute bottom-[10%] right-[6%] w-[10%] flex items-end gap-0.5">
-              <img src={smallPumpkinImg} alt="Small Pumpkin" className="w-[40%] h-auto" />
-              <img src={bigPumpkinImg} alt="Big Pumpkin" className="w-[60%] h-auto" />
-            </div>
-
-            {/* Step 1: Ghost perfectly floating over the road right side */}
-            {currentSlide === 1 && (
-              <div className="absolute bottom-[35%] left-[67%] -translate-x-1/2 w-[5%] h-auto animate-float-slow transition-all duration-700">
-                <img src={ghostImg} alt="Ghost Asset" className="w-full h-auto" />
-              </div>
-            )}
-
-            {currentSlide === 2 && (
-              <div className="absolute bottom-[20%] left-[44%] -translate-x-1/2 w-[42%] h-auto flex items-center gap-2 transition-all duration-700 animate-float-mini">
-                <img src={ghostImg} alt="Ghost Asset" className="w-[35%] h-auto" />
-                <div className="relative w-[60%] aspect-square">
-                  <img src={bigRoundImg} alt="Dialogue Round" className="w-full h-full object-contain" />
-                  <div className="absolute inset-0 flex items-center justify-center p-4 text-center">
-                    <p className="font-serif font-bold text-[8px] sm:text-[10px] md:text-xs text-amber-950">
-                      Step 2: Funds loaded! Ready to search for exchanges.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            )}
-
-            {currentSlide === 3 && (
-              <div className="absolute inset-0 w-full h-full transition-all duration-700">
-                <div className="absolute bottom-[15%] left-[58%] w-[15%] h-auto animate-float-slow">
-                  <img src={ghostImg} alt="Ghost Asset" className="w-full h-auto" />
-                </div>
-                <img src={smallRoundImg} alt="Bubble" className="absolute bottom-[26%] left-[30%] w-[8%] h-auto animate-bounce" />
-                <img src={smallRoundImg} alt="Bubble" className="absolute bottom-[14%] left-[24%] w-[9%] h-auto" />
-                <img src={bigRoundImg} alt="Bubble" className="absolute bottom-[8%] left-[40%] w-[12%] h-auto" />
-              </div>
-            )}
-
-            {currentSlide === 4 && (
-              <div className="absolute inset-0 w-full h-full transition-all duration-700">
-                <div className="absolute bottom-[12%] right-[22%] w-[38%] h-auto flex items-center gap-1 animate-float-mini">
-                  <div className="relative w-[45%] aspect-square">
-                    <img src={smallRoundImg} alt="Bubble Texture" className="w-full h-full object-contain" />
-                    <div className="absolute inset-0 flex items-center justify-center p-2 text-center">
-                      <p className="font-serif font-bold text-[7px] sm:text-[9px] text-amber-950">Set Slippage</p>
-                    </div>
-                  </div>
-                  <img src={ghostImg} alt="Ghost Asset" className="w-[50%] h-auto scale-x-[-1]" />
-                </div>
-              </div>
-            )}
-
-            {currentSlide === 5 && (
-              <div className="absolute inset-0 w-full h-full transition-all duration-700">
-                <div className="absolute bottom-[10%] left-[32%] w-[14%] h-auto animate-float-slow">
-                  <img src={ghostImg} alt="Ghost Asset" className="w-full h-auto" />
-                </div>
-                <img src={smallRoundImg} alt="Bubble Track" className="absolute bottom-[28%] left-[48%] w-[8%] h-auto" />
-                <img src={smallRoundImg} alt="Bubble Track" className="absolute bottom-[20%] left-[58%] w-[7%] h-auto" />
-              </div>
-            )}
-
+          {/* =========================================================
+              1️⃣ LEFT FRONT COUPLE (Active on Slide 6)
+             ========================================================= */}
+          <div className="absolute bottom-[4%] left-[3%] w-[15%] aspect-[4/3] z-30">
+            {/* Wooden Signs Layer (Rendered underneath pumpkins) */}
             {currentSlide === 6 && (
-              <div className="absolute bottom-[14%] left-[50%] -translate-x-1/2 w-[40%] h-auto flex flex-col items-center gap-1 transition-all duration-700 animate-float-slow">
-                <div className="relative w-[45%] aspect-square">
-                  <img src={bigRoundImg} alt="Success Badge" className="w-full h-full object-contain" />
-                  <div className="absolute inset-0 flex items-center justify-center p-3 text-center">
-                    <p className="font-serif font-black text-[9px] sm:text-xs text-emerald-900">SUCCESS!</p>
+              <div className="absolute inset-0 z-0 pointer-events-none animate-float-mini">
+                {/* Big Board behind Big Pumpkin */}
+                <div className="absolute top-[-35%] left-[5%] w-[45%] aspect-square">
+                  <img src={bigRoundImg} className="w-full h-full object-contain" />
+                  <div className="absolute inset-0 flex items-center justify-center p-2 text-center">
+                    <p className="font-serif font-bold text-[7px] sm:text-[9px] text-amber-950 leading-tight">Connect to the BooMaster</p>
                   </div>
                 </div>
-                <img src={ghostImg} alt="Ghost Asset" className="w-[45%] h-auto" />
+                {/* Small Board behind Small Pumpkin */}
+                <div className="absolute top-[-20%] right-[10%] w-[35%] aspect-square">
+                  <img src={smallRoundImg} className="w-full h-full object-contain" />
+                  <div className="absolute inset-0 flex items-center justify-center p-1 text-center">
+                    <p className="font-serif font-bold text-[6px] sm:text-[8px] text-amber-950 leading-tight">Connect to the BooMaster</p>
+                  </div>
+                </div>
               </div>
             )}
+            {/* Pumpkins Layer with Small overlapping Right of Big */}
+            <div className="absolute inset-0 flex items-end z-10">
+              <img src={bigPumpkinImg} className="absolute left-0 bottom-0 w-[65%] h-auto z-10" alt="Big Pumpkin" />
+              <img src={smallPumpkinImg} className="absolute right-[5%] bottom-0 w-[45%] h-auto z-20" alt="Small Pumpkin" />
+            </div>
           </div>
 
-          {/* Dots Indicators */}
-          <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2 z-30">
-            {[1, 2, 3, 4, 5, 6].map((idx) => (
-              <div
-                key={`dot-b-${idx}`}
-                className={`h-1.5 rounded-full transition-all duration-300 ${
-                  currentSlide === idx ? "w-5 bg-purple-500" : "w-1.5 bg-white/30"
-                }`}
-              />
-            ))}
+
+          {/* =========================================================
+              2️⃣ LEFT BACK COUPLE (Active on Slide 4)
+             ========================================================= */}
+          <div className="absolute bottom-[16%] left-[28%] w-[11%] aspect-[4/3] z-20">
+            {/* Wooden Signs Layer */}
+            {currentSlide === 4 && (
+              <div className="absolute inset-0 z-0 pointer-events-none animate-float-mini">
+                <div className="absolute top-[-35%] left-[5%] w-[45%] aspect-square">
+                  <img src={bigRoundImg} className="w-full h-full object-contain" />
+                  <div className="absolute inset-0 flex items-center justify-center p-1 text-center">
+                    <p className="font-serif font-bold text-[5px] sm:text-[7px] text-amber-950 leading-tight">Fund your wallet with ether</p>
+                  </div>
+                </div>
+                <div className="absolute top-[-20%] right-[10%] w-[35%] aspect-square">
+                  <img src={smallRoundImg} className="w-full h-full object-contain" />
+                  <div className="absolute inset-0 flex items-center justify-center p-1 text-center">
+                    <p className="font-serif font-bold text-[4px] sm:text-[6px] text-amber-950 leading-tight">Fund your wallet with ether</p>
+                  </div>
+                </div>
+              </div>
+            )}
+            <div className="absolute inset-0 flex items-end z-10">
+              <img src={bigPumpkinImg} className="absolute left-0 bottom-0 w-[65%] h-auto z-10" alt="Big Pumpkin" />
+              <img src={smallPumpkinImg} className="absolute right-[5%] bottom-0 w-[45%] h-auto z-20" alt="Small Pumpkin" />
+            </div>
           </div>
+
+
+          {/* =========================================================
+              3️⃣ RIGHT BACK COUPLE (Active on Slide 2)
+             ========================================================= */}
+          <div className="absolute bottom-[14%] right-[44%] w-[11%] aspect-[4/3] z-10">
+            {/* Wooden Signs Layer */}
+            {currentSlide === 2 && (
+              <div className="absolute inset-0 z-0 pointer-events-none animate-float-mini">
+                <div className="absolute top-[-35%] left-[5%] w-[45%] aspect-square">
+                  <img src={bigRoundImg} className="w-full h-full object-contain" />
+                  <div className="absolute inset-0 flex items-center justify-center p-1 text-center">
+                    <p className="font-serif font-bold text-[5px] sm:text-[7px] text-amber-950 leading-tight">Create a crypto wallet</p>
+                  </div>
+                </div>
+                <div className="absolute top-[-20%] right-[10%] w-[35%] aspect-square">
+                  <img src={smallRoundImg} className="w-full h-full object-contain" />
+                  <div className="absolute inset-0 flex items-center justify-center p-1 text-center">
+                    <p className="font-serif font-bold text-[4px] sm:text-[6px] text-amber-950 leading-tight">Create a crypto wallet</p>
+                  </div>
+                </div>
+              </div>
+            )}
+            <div className="absolute inset-0 flex items-end z-10">
+              <img src={bigPumpkinImg} className="absolute left-0 bottom-0 w-[65%] h-auto z-10" alt="Big Pumpkin" />
+              <img src={smallPumpkinImg} className="absolute right-[5%] bottom-0 w-[45%] h-auto z-20" alt="Small Pumpkin" />
+            </div>
+          </div>
+
+
+          {/* =========================================================
+              4️⃣ RIGHT FRONT COUPLE (Active on Slide 5)
+             ========================================================= */}
+          <div className="absolute bottom-[6%] right-[5%] w-[14%] aspect-[4/3] z-30">
+            {/* Wooden Signs Layer */}
+            {currentSlide === 5 && (
+              <div className="absolute inset-0 z-0 pointer-events-none animate-float-mini">
+                <div className="absolute top-[-35%] left-[5%] w-[45%] aspect-square">
+                  <img src={bigRoundImg} className="w-full h-full object-contain" />
+                  <div className="absolute inset-0 flex items-center justify-center p-2 text-center">
+                    <p className="font-serif font-bold text-[7px] sm:text-[9px] text-amber-950 leading-tight">Swap ETH for $BOO</p>
+                  </div>
+                </div>
+                <div className="absolute top-[-20%] right-[10%] w-[35%] aspect-square">
+                  <img src={smallRoundImg} className="w-full h-full object-contain" />
+                  <div className="absolute inset-0 flex items-center justify-center p-1 text-center">
+                    <p className="font-serif font-bold text-[6px] sm:text-[8px] text-amber-950 leading-tight">Swap ETH for $BOO</p>
+                  </div>
+                </div>
+              </div>
+            )}
+            <div className="absolute inset-0 flex items-end z-10">
+              <img src={bigPumpkinImg} className="absolute left-0 bottom-0 w-[65%] h-auto z-10" alt="Big Pumpkin" />
+              <img src={smallPumpkinImg} className="absolute right-[5%] bottom-0 w-[45%] h-auto z-20" alt="Small Pumpkin" />
+            </div>
+          </div>
+
+
+          {/* =========================================================
+              DYNAMIC GHOST ROUTING ENGINE
+             ========================================================= */}
+          
+          {/* Slide 1: General Welcome/Intro Ghost */}
+          {currentSlide === 1 && (
+            <div className="absolute bottom-[36%] left-[66%] -translate-x-1/2 w-[5%] h-auto animate-float-slow transition-all duration-700">
+              <img src={ghostImg} alt="Ghost" className="w-full h-auto" />
+            </div>
+          )}
+
+          {/* Slide 2: Ghost interacts with Right Back Couple */}
+          {currentSlide === 2 && (
+            <div className="absolute bottom-[16%] right-[56%] w-[8%] h-auto animate-float-slow transition-all duration-700">
+              <img src={ghostImg} alt="Ghost" className="w-full h-auto" />
+            </div>
+          )}
+
+          {/* Slide 3: Ghost on Road Middle */}
+          {currentSlide === 3 && (
+            <div className="absolute bottom-[18%] left-[45%] w-[8%] h-auto scale-x-[-1] animate-float-slow transition-all duration-700">
+              <img src={ghostImg} alt="Ghost" className="w-full h-auto" />
+            </div>
+          )}
+
+          {/* Slide 4: Ghost interacts with Left Back Couple */}
+          {currentSlide === 4 && (
+            <div className="absolute bottom-[14%] left-[40%] w-[8%] h-auto animate-float-slow transition-all duration-700">
+              <img src={ghostImg} alt="Ghost" className="w-full h-auto" />
+            </div>
+          )}
+
+          {/* Slide 5: Ghost interacts with Right Front Couple */}
+          {currentSlide === 5 && (
+            <div className="absolute bottom-[7%] right-[20%] w-[9%] h-auto scale-x-[-1] animate-float-slow transition-all duration-700">
+              <img src={ghostImg} alt="Ghost" className="w-full h-auto" />
+            </div>
+          )}
+
+          {/* Slide 6: Ghost interacts with Left Front Couple */}
+          {currentSlide === 6 && (
+            <div className="absolute bottom-[5%] left-[18%] w-[9%] h-auto animate-float-slow transition-all duration-700">
+              <img src={ghostImg} alt="Ghost" className="w-full h-auto" />
+            </div>
+          )}
+
+        </div>
+
+        {/* Carousel Progress Indicators */}
+        <div className="absolute bottom-5 left-1/2 -translate-x-1/2 flex gap-2 z-30">
+          {[1, 2, 3, 4, 5, 6].map((idx) => (
+            <div
+              key={`nav-dot-${idx}`}
+              className={`h-1.5 rounded-full transition-all duration-300 ${
+                currentSlide === idx ? "w-6 bg-orange-500" : "w-1.5 bg-white/30"
+              }`}
+            />
+          ))}
         </div>
       </section>
     </div>

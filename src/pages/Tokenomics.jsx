@@ -7,6 +7,9 @@ import centerPumpkinImg from "../assets/s_pum.png";
 import footerPlankImg from "../assets/end.png";
 import icon9Img from "../assets/icons/icon9.png";
 import twitterImg from "../assets/icons/twitter.png";
+import animal1Img from "../assets/animal1.png";
+import animal3Img from "../assets/animal3.png";
+import animal2Img from "../assets/animal2.png";
 
 export default function Tokenomics() {
   return (
@@ -33,8 +36,8 @@ export default function Tokenomics() {
           >
             {/* Presale -> donut (top-left)
                 Path is correct, but circle color should match line color (#06353d) */}
-            <path d="M160,95 L400,95 L400,170" stroke="#06353d" strokeWidth="2" fill="none" />
-            <circle cx="400" cy="170" r="6" fill="#06353d" />
+            <path d="M160,95 L400,95 L400,140" stroke="#06353d" strokeWidth="2" fill="none" />
+            <circle cx="400" cy="140" r="6" fill="#06353d" />
 
             {/* Burned -> donut (bottom-left)
                 Corrected circle color from "#1e3a8a" to "#7e8cb2" */}
@@ -43,13 +46,13 @@ export default function Tokenomics() {
 
             {/* Liquidity -> donut (top-right)
                 Path and circle color are correct (#c7c7cc) */}
-            <path d="M800,55 L530,55 L530,120" stroke="#783981" strokeWidth="2" fill="none" />
-            <circle cx="530" cy="120" r="6" fill="#783981" />
+            <path d="M800,55 L530,55 L530,100" stroke="#783981" strokeWidth="2" fill="none" />
+            <circle cx="530" cy="100" r="6" fill="#783981" />
 
             {/* Cex -> donut (bottom-right)
                 Path and circle color are correct (#6366f1) */}
-            <path d="M870,220 L615,220 L615,185" stroke="#2c30f6" strokeWidth="2" fill="none" />
-            <circle cx="615" cy="185" r="6" fill="#2c30f6" />
+            <path d="M870,220 L615,220 L615,165" stroke="#2c30f6" strokeWidth="2" fill="none" />
+            <circle cx="615" cy="165" r="6" fill="#2c30f6" />
           </svg>
 
           {/* ===== CENTER DONUT CHART ===== */}
@@ -100,7 +103,7 @@ export default function Tokenomics() {
 
           {/* Top Left Callout: PRESALE (30%)
               Corrected circle color from "#1e3a8a" to "#06b6d4" to match segment */}
-          <div className="absolute left-[2%] top-[8%] flex items-center gap-2">
+          <div className="absolute right-[78%] top-[8%] flex items-center gap-2 z-50" >
             <div className="text-left whitespace-nowrap">
               <p className="font-serif italic font-bold text-white text-sm sm:text-base leading-tight">Presale</p>
               <p className="font-sans font-black text-cyan-400 text-base sm:text-lg leading-tight">30%</p>
@@ -117,7 +120,7 @@ export default function Tokenomics() {
 
           {/* Bottom Left Callout: BURNED (50%)
               Corrected circle color from "#1e3a8a" to "#1e3a8a" to match segment */}
-          <div className="absolute left-[3%] bottom-[10%] flex items-center gap-2">
+          <div className="absolute right-[78%] bottom-[10%] flex items-center gap-2 z-50">
             <div className="text-left whitespace-nowrap">
               <p className="font-serif italic font-bold text-white text-sm sm:text-base leading-tight">Burned</p>
               <p className="font-sans font-black text-blue-900 text-base sm:text-lg leading-tight">50%</p>
@@ -134,7 +137,7 @@ export default function Tokenomics() {
 
           {/* Top Right Callout: LIQUIDITY (5%)
               Corrected circle color from "#1e3a8a" to "#c7c7cc" to match segment */}
-          <div className="absolute right-[4%] top-[2%] flex items-center gap-2">
+          <div className="absolute left-[75%] top-[2%] flex items-center gap-2 z-50">
             {/* Added circle matching segment color */}
             <div className="w-30 h-30 flex items-center justify-center -ml-1">
   <img
@@ -151,7 +154,7 @@ export default function Tokenomics() {
 
           {/* Mid Right Callout: CEX (15%)
               Corrected circle color from "#1e3a8a" to "#6366f1" to match segment */}
-          <div className="absolute right-[1%] top-[35%] flex items-center gap-2">
+          <div className="absolute left-[82%] top-[35%] flex items-center gap-2 z-50">
             {/* Added circle matching segment color */}
             <div className="w-30 h-30 flex items-center justify-center -ml-1">
   <img
@@ -174,7 +177,7 @@ export default function Tokenomics() {
           ========================================================================= */}
       <footer className="relative w-full bg-black pb-12 pt-4 px-4 flex flex-col items-center">
 
-        <div className="relative w-full max-w-10xl aspect-[1100/320] flex items-center justify-center">
+        <div className="relative w-full max-w-10xl aspect-[1100/500] sm:aspect-[1100/320] flex items-center justify-center">
 
           {/* Base Layer Wooden Asset Frame */}
           <img
@@ -184,17 +187,27 @@ export default function Tokenomics() {
           />
 
           {/* Left Corner: small companion silhouette */}
-          <div className="absolute left-[2%] bottom-[2%] w-[16%] aspect-square z-20 flex items-end justify-center pointer-events-none">
-            <svg className="w-full h-full opacity-90 text-zinc-700" viewBox="0 0 100 100" fill="currentColor">
-              <path d="M15,90 C15,60 35,35 50,65 C58,40 80,45 85,90 Z" />
-              <circle cx="32" cy="42" r="9" />
-              <circle cx="62" cy="38" r="11" />
-            </svg>
-          </div>
+          <div className="absolute left-[12%] bottom-[2%] w-[12%] aspect-square z-20 flex items-end justify-center pointer-events-none">
+            <img
+    src={animal2Img}
+    alt="Animal 2"
+    className="w-full h-auto transform -scale-x-100 object-contain"
+  />
+</div>
+
+{/* Animal 3 - Front */}
+<div className="absolute left-[15%] bottom-[2%] w-[8%] z-20 pointer-events-none">
+  <img
+    src={animal3Img}
+    alt="Animal 3"
+    className="w-full h-auto object-contain"
+  />
+</div>
+            
 
           {/* Right Corner: Large Story Ghost and Resting Pumpkins Group */}
           <div className="absolute right-[1%] bottom-[0%] w-[24%] h-[95%] z-20 flex items-end justify-start pointer-events-none">
-            <div className="absolute right-[20%] top-[-0%] w-[75%] animate-float-slow filter drop-shadow-[0_10px_15px_rgba(255,255,255,0.05)]">
+            <div className="absolute right-[15%] top-[5%] w-[55%] sm:w-[75%] animate-float-slow filter drop-shadow-[0_10px_15px_rgba(255,255,255,0.05)]">
               <img src={bigGhostImg} alt="Master Ghost" className="w-full h-auto transform -scale-x-100 object-contain" />
             </div>
             {/* Overlapping Pumpkins Inside Wood */}
@@ -214,6 +227,13 @@ export default function Tokenomics() {
     className="absolute right-[8%] bottom-0 w-[45%] h-auto z-20"
   />
 
+   {/* Animal - in front of pumpkins */}
+  <img
+    src={animal1Img}
+    alt="Animal"
+    className="absolute left-[55%] bottom-[2%] w-[65%] h-auto z-40"
+  />
+
 </div>
           </div>
 
@@ -222,7 +242,7 @@ export default function Tokenomics() {
               ========================================================================= */}
           <div className="relative z-10 w-full h-full flex flex-col items-center justify-center px-12 pb-[4%] pt-[2%] text-center">
 
-            <h2 className="font-serif font-black text-amber-950 text-xl sm:text-3xl md:text-4xl tracking-wide">
+            <h2 className="font-serif font-black text-amber-950 text-xl sm:text-3xl md:text-6xl tracking-wide">
               Following Us
             </h2>
 
@@ -272,7 +292,7 @@ export default function Tokenomics() {
 
             </div>
 
-            <p className="font-serif font-bold text-[9px] sm:text-xs text-amber-950/80 tracking-wider mt-3 sm:mt-5">
+            <p className="font-serif font-bold text-[20px] sm:text-xs text-amber-950/80 tracking-wider mt-3 sm:mt-5">
               © Copyright {new Date().getFullYear()} all right reserved by BooMaster
             </p>
 

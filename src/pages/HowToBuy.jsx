@@ -89,7 +89,7 @@ export default function HowToBuy() {
              ========================================================= */}
           <div className="absolute bottom-[14%] right-[44%] w-[11%] aspect-[4/3] z-10">
             {/* Wooden Signs Layer */}
-            {currentSlide === 2 && (
+            {currentSlide === 3 && (
               <div className="absolute inset-0 z-0 pointer-events-none animate-float-mini">
                 <div className="absolute top-[-35%] left-[5%] w-[45%] aspect-square">
                   <img src={bigRoundImg} className="w-full h-full object-contain" />
@@ -106,8 +106,8 @@ export default function HowToBuy() {
               </div>
             )}
             <div className="absolute inset-0 flex items-end z-10">
-              <img src={bigPumpkinImg} className="absolute left-0 bottom-0 w-[65%] h-auto z-10" alt="Big Pumpkin" />
-              <img src={smallPumpkinImg} className="absolute right-[5%] bottom-0 w-[45%] h-auto z-20" alt="Small Pumpkin" />
+              <img src={bigPumpkinImg} className="absolute left-60 bottom-0 w-[65%] h-auto z-10" alt="Big Pumpkin" />
+              <img src={smallPumpkinImg} className="absolute left-75 bottom-0 w-[45%] h-auto z-20" alt="Small Pumpkin" />
             </div>
           </div>
 
@@ -153,14 +153,15 @@ export default function HowToBuy() {
 
           {/* Slide 2: Ghost interacts with Right Back Couple */}
           {currentSlide === 2 && (
-            <div className="absolute bottom-[16%] right-[56%] w-[8%] h-auto animate-float-slow transition-all duration-700">
+            <div className="absolute bottom-[18%] left-[45%] w-[8%] h-auto scale-x-[-1] animate-float-slow transition-all duration-700">
               <img src={ghostImg} alt="Ghost" className="w-full h-auto" />
             </div>
+            
           )}
 
           {/* Slide 3: Ghost on Road Middle */}
           {currentSlide === 3 && (
-            <div className="absolute bottom-[18%] left-[45%] w-[8%] h-auto scale-x-[-1] animate-float-slow transition-all duration-700">
+            <div className="absolute bottom-[16%] right-[56%] w-[8%] h-auto animate-float-slow transition-all duration-700">
               <img src={ghostImg} alt="Ghost" className="w-full h-auto" />
             </div>
           )}

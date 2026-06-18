@@ -167,42 +167,42 @@ export default function HowToBuy() {
           
           {/* Slide 1: Welcome/Intro Ghost - Far down the road pathway */}
           {currentSlide === 1 && (
-            <div className="absolute bottom-[40%] right-[45%] w-[2%] h-auto scale-x-[-1] animate-float-slow transition-all duration-700">
+            <div className="absolute bottom-[40%] right-[45%] w-[2%] h-auto scale-x-[-1] animate-float-slow transition-all duration-700 z-[999]">
               <img src={ghostImg} alt="Ghost Path Start" className="w-full h-auto opacity-90" />
             </div>
           )}
 
           {/* Slide 2: Ghost drifts intermediate/closer on the path */}
           {currentSlide === 2 && (
-            <div className="absolute bottom-[38%] right-[55%] w-[3%] h-auto scale-x-[-1] animate-float-slow transition-all duration-700">
+            <div className="absolute bottom-[38%] right-[55%] w-[3%] h-auto animate-float-slow transition-all duration-700 z-[999]">
               <img src={ghostImg} alt="Ghost Coming Forward" className="w-full h-auto" />
             </div>
           )}
 
           {/* Slide 3: Ghost meets Right Back Couple */}
           {currentSlide === 3 && (
-            <div className="absolute bottom-[13%] left-[37%] w-[7.5%] h-auto scale-x-[-1] animate-float-slow transition-all duration-700">
+            <div className="absolute bottom-[13%] left-[37%] w-[7.5%] h-auto scale-x-[-1] animate-float-slow transition-all duration-700 z-[999]">
               <img src={ghostImg} alt="Ghost Meeting Right Back" className="w-full h-auto" />
             </div>
           )}
 
           {/* Slide 4: Ghost floating with Left Back Couple */}
           {currentSlide === 4 && (
-            <div className="absolute bottom-[11%] left-[36%] w-[7.5%] h-auto animate-float-slow transition-all duration-700">
+            <div className="absolute bottom-[11%] left-[36%] w-[7.5%] h-auto animate-float-slow transition-all duration-700 z-[999]">
               <img src={ghostImg} alt="Ghost Meeting Left Back" className="w-full h-auto" />
             </div>
           )}
 
           {/* Slide 5: Ghost interacting with Right Front Couple */}
           {currentSlide === 5 && (
-            <div className="absolute bottom-[5%] right-[18%] w-[9%] h-auto scale-x-[-1] animate-float-slow transition-all duration-700">
+            <div className="absolute bottom-[5%] right-[18%] w-[9%] h-auto scale-x-[-1] animate-float-slow transition-all duration-700 z-[999]">
               <img src={ghostImg} alt="Ghost Meeting Right Front" className="w-full h-auto" />
             </div>
           )}
 
           {/* Slide 6: Ghost interacting with Left Front Couple */}
           {currentSlide === 6 && (
-            <div className="absolute bottom-[3%] left-[17%] w-[9%] h-auto animate-float-slow transition-all duration-700">
+            <div className="absolute bottom-[3%] left-[17%] w-[9%] h-auto animate-float-slow transition-all duration-700 z-[999]">
               <img src={ghostImg} alt="Ghost Meeting Left Front" className="w-full h-auto" />
             </div>
           )}

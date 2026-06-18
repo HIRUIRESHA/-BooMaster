@@ -71,7 +71,7 @@ export default function FAQ() {
 
         {/* Core Screen Landscape Area (1808 x 908 Aspect Ratio Profile) */}
         {/* Changed z-index to z-10 so it sits firmly on top of the emerging ghost background */}
-        <div className="relative z-10 h-[580px] md:h-[650px] rounded-2xl overflow-hidden border border-zinc-900 shadow-[0_0_50px_rgba(147,51,234,0.1)]">
+        <div className="relative z-10 h-[580px] md:h-[650px] rounded-2xl overflow-hidden border border-zinc-900 shadow-[0_0_50px_rgba(147,51,234,0.1)] ">
           
           {/* Layer 1: Environmental Art Canvas Backing */}
           <img
@@ -92,11 +92,11 @@ export default function FAQ() {
 
           {/* Layer 4: Interactive Interactive Dynamic Characters & Dialogue Box */}
           <div className="absolute inset-0 w-full h-full flex items-end justify-center pb-20 md:pb-24 z-20 px-6 md:px-12">
-            <div className="w-full max-w-5xl flex items-end justify-between relative gap-10">
+            <div className="w-full max-w-5xl flex items-end justify-between relative gap-10 ">
               
               {/* LEFT CHARACTER: Asking the Question */}
               <div 
-                className={`w-[18%] max-w-[150px] transition-all duration-500 transform ${
+                className={`w-[18%] max-w-[150px] transition-all z-50 duration-500 transform ${
                   isQuestionPhase 
                     ? "animate-ghost-bounce scale-105 filter drop-shadow-[0_0_20px_rgba(168,85,247,0.5)]" 
                     : "opacity-75 scale-95"
@@ -122,9 +122,9 @@ export default function FAQ() {
                 />
                 
                 {/* Dynamically Interchanging Text Node */}
-                <div className="relative z-10 text-center w-full px-2 md:px-4">
-                  <p className="font-serif font-bold text-[10px] sm:text-xs md:text-base lg:text-lg text-zinc-900 tracking-wide leading-tight transition-all duration-300">
-                    {isQuestionPhase 
+                <div className="relative z-10 text-center w-full px-0 md:px-6 flex items-center justify-center h-full min-h-0 overflow-hidden">
+<p className="font-serif font-bold text-zinc-900 tracking-wide leading-tight text-[clamp(8px,1.0vw,18px)] break-words whitespace-normal text-center max-w-full max-h-full">   
+   {isQuestionPhase 
                       ? faqData[currentSlide].question 
                       : faqData[currentSlide].answer
                     }
@@ -134,7 +134,7 @@ export default function FAQ() {
 
               {/* RIGHT CHARACTER: Replying with the Answer */}
               <div 
-                className={`w-[18%] max-w-[150px] transition-all duration-500 transform scale-x-[-1] ${
+                className={`w-[18%] max-w-[150px] transition-all z-50 duration-500 transform scale-x-[-1] ${
                   !isQuestionPhase 
                     ? "animate-ghost-bounce scale-105 filter drop-shadow-[0_0_20px_rgba(168,85,247,0.5)]" 
                     : "opacity-75 scale-95"

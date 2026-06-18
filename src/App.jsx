@@ -20,11 +20,16 @@ export default function App() {
 <FAQ />
 
 <div
-  className="relative z-[9999]"
-  style={{
-    marginTop: "-120px",
-    marginBottom: "-120px",
-  }}
+  className="
+    relative
+    z-[9999]
+    -mt-12
+    -mb-12
+    md:-mt-20
+    md:-mb-20
+    lg:-mt-28
+    lg:-mb-28
+  "
 >
   <GhostRibbon />
 </div>
@@ -32,11 +37,16 @@ export default function App() {
 <Roadmap />
 
 <div
-  className="relative z-[9999]"
-  style={{
-    marginTop: "-120px",
-    marginBottom: "-120px",
-  }}
+  className="
+    relative
+    z-[9999]
+    -mt-12
+    -mb-12
+    md:-mt-20
+    md:-mb-20
+    lg:-mt-28
+    lg:-mb-28
+  "
 >
   <GhostRibbon />
 </div>

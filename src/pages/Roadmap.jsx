@@ -62,9 +62,8 @@ export default function Roadmap() {
     : "bottom-[10%] left-[25%]";
 
   return (
-    <div className="w-full h-screen max-h-screen bg-black flex flex-col overflow-hidden select-none">
-      <section className="relative w-full h-full flex flex-col items-center justify-center overflow-hidden">
-        
+<div className="w-full bg-black overflow-hidden select-none">
+<section className="relative w-full min-h-screen flex flex-col items-center justify-center overflow-hidden">        
         {/* Fullscreen Base Layer Background Canvas */}
         <img
           src={bg3Img}
@@ -78,7 +77,7 @@ export default function Roadmap() {
         <div className="relative w-full max-w-5xl h-full mx-auto flex items-center justify-center z-10">
           
           {/* Central Signpost Asset Tree Container */}
-          <div className="relative w-[90%] xs:w-[75%] sm:w-[0%] md:w-[51%] aspect-[3/4] flex items-center justify-center mb-[5vh]">
+          <div className="relative w-[90%] xs:w-[75%] sm:w-[60%] md:w-[51%] aspect-[3/4] flex items-center justify-center mb-[5vh]">
             <img
               src={rmTreeImg}
               alt="Wooden signpost"
@@ -117,12 +116,8 @@ export default function Roadmap() {
   <div
     key={currentSlide}
         className="absolute z-30
-        w-[45%]
-        sm:w-[50%]
-        md:w-[60%]
-        lg:w-[65%]
-        aspect-square
-        transition-all duration-500 ease-out"
+w-[66%]
+aspect-square"
     style={{
       top: boardPosition[currentSlide].top,
       left: boardPosition[currentSlide].left,
@@ -135,8 +130,8 @@ export default function Roadmap() {
       alt="Phase board"
       className="absolute inset-0 w-full h-full object-contain z-0 filter drop-shadow-[0_6px_8px_rgba(0,0,0,0.5)]"
     />
-    <div className="absolute inset-0 flex items-center justify-center">
-  <div className="w-[60%] h-[60%] flex items-center justify-center">
+    <div className="absolute inset-0 flex items-end justify-center pb-[20%]">
+  <div className="w-[45%] h-[60%] flex items-center justify-center">
     <p className="font-serif font-bold text-center leading-snug text-white text-[8px] xs:text-[10px] sm:text-[12px] md:text-[14px] break-words">
       {phaseContent[currentSlide]}
     </p>
@@ -158,7 +153,7 @@ export default function Roadmap() {
 
           {/* Companion Floating Ghost Asset */}
           <div
-            className={`absolute ${ghostPosition} w-[18%] transition-all duration-700 ease-in-out z-50 pointer-events-none`}
+            className={`absolute ${ghostPosition} w-[15%] transition-all duration-700 ease-in-out z-50 pointer-events-none`}
             style={{ animation: "floatSlow 4.5s ease-in-out infinite" }}
           >
             <img src={centerGhostImg} alt="Ghost" className="w-full h-auto object-contain" />

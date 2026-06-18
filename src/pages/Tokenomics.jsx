@@ -105,12 +105,11 @@ export default function Tokenomics() {
               Corrected circle color from "#1e3a8a" to "#06b6d4" to match segment */}
           <div className="absolute right-[78%] top-[8%] flex items-center gap-2 z-50" >
             <div className="text-left whitespace-nowrap">
-              <p className="font-serif italic font-bold text-white text-sm sm:text-base leading-tight">Presale</p>
-              <p className="font-sans font-black text-cyan-400 text-base sm:text-lg leading-tight">30%</p>
+              <p className="font-serif italic font-bold text-white text-[10px] sm:text-sm md:text-base leading-tight">Presale</p>
+              <p className="font-sans font-black text-cyan-400 text-xs sm:text-base md:text-lg leading-tight">30%</p>
             </div>
             {/* Added circle matching segment color */}
-            <div className="w-30 h-30 flex items-center justify-center -ml-1">
-  <img
+<div className="w-32 sm:w-40 md:w-48 flex items-center justify-center -ml-1">  <img
     src={rGhostImg}
     alt="Presale Ghost"
     className="w-full h-auto transform -scale-x-100 animate-float-slow"
@@ -122,12 +121,11 @@ export default function Tokenomics() {
               Corrected circle color from "#1e3a8a" to "#1e3a8a" to match segment */}
           <div className="absolute right-[78%] bottom-[10%] flex items-center gap-2 z-50">
             <div className="text-left whitespace-nowrap">
-              <p className="font-serif italic font-bold text-white text-sm sm:text-base leading-tight">Burned</p>
-              <p className="font-sans font-black text-blue-900 text-base sm:text-lg leading-tight">50%</p>
+              <p className="font-serif italic font-bold text-white text-[10px] sm:text-sm md:text-base leading-tight">Burned</p>
+              <p className="font-sans font-black text-blue-900 text-xs sm:text-base md:text-lg leading-tight">50%</p>
             </div>
             {/* Added circle matching segment color */}
-            <div className="w-30 h-30 flex items-center justify-center -ml-1">
-  <img
+<div className="w-32 sm:w-40 md:w-48 flex items-center justify-center -ml-1">  <img
     src={rGhostImg}
     alt="Presale Ghost"
     className="w-full h-auto transform -scale-x-100 animate-float-slow"
@@ -139,16 +137,15 @@ export default function Tokenomics() {
               Corrected circle color from "#1e3a8a" to "#c7c7cc" to match segment */}
           <div className="absolute left-[75%] top-[2%] flex items-center gap-2 z-50">
             {/* Added circle matching segment color */}
-            <div className="w-30 h-30 flex items-center justify-center -ml-1">
-  <img
+<div className="w-32 sm:w-40 md:w-48 flex items-center justify-center -ml-1">  <img
     src={rGhostImg}
     alt="Presale Ghost"
     className="w-full h-auto animate-float-slow"
   />
 </div>
             <div className="text-left whitespace-nowrap">
-              <p className="font-serif italic font-bold text-white text-sm sm:text-base leading-tight">Liquidity</p>
-              <p className="font-sans font-black text-zinc-400 text-base sm:text-lg leading-tight">5%</p>
+              <p className="font-serif italic font-bold text-white text-[10px] sm:text-sm md:text-base leading-tight">Liquidity</p>
+              <p className="font-sans font-black text-zinc-400 text-xs sm:text-base md:text-lg md:text-lg leading-tight">5%</p>
             </div>
           </div>
 
@@ -156,16 +153,15 @@ export default function Tokenomics() {
               Corrected circle color from "#1e3a8a" to "#6366f1" to match segment */}
           <div className="absolute left-[82%] top-[35%] flex items-center gap-2 z-50">
             {/* Added circle matching segment color */}
-            <div className="w-30 h-30 flex items-center justify-center -ml-1">
-  <img
+<div className="w-32 sm:w-40 md:w-48 flex items-center justify-center -ml-1">  <img
     src={rGhostImg}
     alt="Presale Ghost"
     className="w-full h-auto animate-float-slow"
   />
 </div>
             <div className="text-left whitespace-nowrap">
-              <p className="font-serif italic font-bold text-white text-sm sm:text-base leading-tight">Cex</p>
-              <p className="font-sans font-black text-indigo-400 text-base sm:text-lg leading-tight">15%</p>
+              <p className="font-serif italic font-bold text-white text-[10px] sm:text-sm md:text-base leading-tight">Cex</p>
+              <p className="font-sans font-black text-indigo-400 text-xs sm:text-base md:text-lg leading-tight">15%</p>
             </div>
           </div>
 
@@ -240,13 +236,12 @@ export default function Tokenomics() {
           {/* =========================================================================
               FOREGROUND INTERACTIVE TEXT & COMMUNITY LINKS BLOCK
               ========================================================================= */}
-          <div className="relative z-10 w-full h-full flex flex-col items-center justify-center px-12 pb-[4%] pt-[2%] text-center">
-
+<div className="relative z-10 w-full h-full flex flex-col items-center justify-center px-4 sm:px-8 md:px-12 pb-[4%] pt-[5%] text-center scale-75 sm:scale-90 md:scale-100">
             <h2 className="font-serif font-black text-amber-950 text-xl sm:text-3xl md:text-6xl tracking-wide">
               Following Us
             </h2>
 
-            <div className="flex items-center justify-center gap-3 sm:gap-4 mt-2 sm:mt-4">
+            <div className="flex items-center justify-center gap-3 sm:gap-4 mt-2 sm:mt-12">
 
               {/* Telegram */}
               <a
@@ -292,7 +287,7 @@ export default function Tokenomics() {
 
             </div>
 
-            <p className="font-serif font-bold text-[20px] sm:text-xs text-amber-950/80 tracking-wider mt-3 sm:mt-5">
+            <p className="font-serif font-bold text-[20px] sm:text-xs text-amber-950/80 tracking-wider mt-3 sm:mt-12">
               © Copyright {new Date().getFullYear()} all right reserved by BooMaster
             </p>
 

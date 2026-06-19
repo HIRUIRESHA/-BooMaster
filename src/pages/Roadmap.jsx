@@ -70,9 +70,7 @@ export default function Roadmap() {
           className="absolute inset-0 w-full h-full object-cover object-bottom pointer-events-none z-0"
         />
 
-        {/* =========================================================================
-            STAGE VIEWPORT CONTAINER (Keeps all components relative & matching scaled aspect)
-            ========================================================================= */}
+        {/* STAGE VIEWPORT CONTAINER (Keeps all components relative & matching scaled aspect)*/}
         <div className="relative w-full max-w-5xl h-full mx-auto flex items-center justify-center z-10">
           
           {/* Central Signpost Asset Tree Container */}
@@ -83,9 +81,7 @@ export default function Roadmap() {
               className="w-full h-auto object-contain pointer-events-none"
             />
 
-            {/* =========================================================================
-                STABLE LABELS GRAPHICS (Relative to signpost structural layers)
-                ========================================================================= */}
+            {/* STABLE LABELS GRAPHICS (Relative to signpost structural layers)*/}
             <div className="absolute top-[18%] left-[18%] z-20">
               <p className="font-serif font-black text-white text-[9px] xs:text-xs sm:text-sm md:text-base tracking-tight drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
                 PHASE 1
@@ -141,9 +137,7 @@ aspect-square"
 
           </div>
 
-          {/* =========================================================================
-              ENVIRONMENTAL CHARACTERS LAYER
-              ========================================================================= */}
+          {/*ENVIRONMENTAL CHARACTERS LAYER*/}
           
           {/* Animal 1 Asset */}
           <div className={`absolute ${animal1Position} w-[9%] transition-all duration-700 ease-in-out z-50 pointer-events-none`}>

@@ -161,7 +161,7 @@ export default function About() {
 
     </div>
 
-    {/* ================= BACKWARD DIAGONAL (BOTTOM LEFT → TOP RIGHT) ================= */}
+    {/* BACKWARD DIAGONAL (BOTTOM LEFT → TOP RIGHT)*/}
     <div className="absolute flex justify-between w-full px-6 md:px-16">
 
       {[...ghostCards].reverse().map((src, idx) => (

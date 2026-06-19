@@ -83,12 +83,7 @@ export default function FAQ() {
           {/* Layer 2: Atmospheric Dark Vignette Mask */}
           <div className="absolute inset-0 bg-black/40 z-10" />
 
-          {/* Layer 3: Subtle floating ghost centered inside the upper canvas frame */}
-          {/* <img
-            src={ghostMid}
-            alt=""
-            className="absolute top-6 left-1/2 -translate-x-1/2 w-[85px] z-20 opacity-90 animate-subtle-float"
-          /> */}
+         
 
           {/* Layer 4: Interactive Interactive Dynamic Characters & Dialogue Box */}
           <div className="absolute inset-0 w-full h-full flex items-end justify-center pb-20 md:pb-24 z-20 px-6 md:px-12">

@@ -16,9 +16,7 @@ import dextoolImg from "../assets/icons/dextool.png";
 export default function Tokenomics() {
   return (
     <div className="w-full bg-black flex flex-col overflow-hidden select-none">
-      {/* =========================================================================
-          SECTION 1: TOKENOMICS DONUT CHART
-          ========================================================================= */}
+      {/* SECTION 1: TOKENOMICS DONUT CHART*/}
       <section className="relative w-full flex flex-col items-center bg-black pt-16 pb-12 px-4">
 
         {/* Sub-headline Text Hook */}
@@ -30,34 +28,29 @@ export default function Tokenomics() {
         {/* Chart + Callouts Stage */}
         <div className="relative w-full max-w-5xl mx-auto mt-10 h-[380px] sm:h-[440px] md:h-[480px]">
 
-          {/* ===== CONNECTOR LINES (drawn behind everything else) ===== */}
+          {/* CONNECTOR LINES (drawn behind everything else) */}
           <svg
   className="absolute inset-0 w-full h-full pointer-events-none z-20"
             viewBox="0 0 1000 480"
             preserveAspectRatio="none"
           >
-            {/* Presale -> donut (top-left)
-                Path is correct, but circle color should match line color (#06353d) */}
+            
             <path d="M160,95 L400,95 L400,140" stroke="#06353d" strokeWidth="2" fill="none" />
             <circle cx="400" cy="140" r="6" fill="#06353d" />
 
-            {/* Burned -> donut (bottom-left)
-                Corrected circle color from "#1e3a8a" to "#7e8cb2" */}
+           
             <path d="M168,370 L430,370 L430,340" stroke="#7e8cb2" strokeWidth="2" fill="none" />
             <circle cx="430" cy="340" r="6" fill="#7e8cb2" />
 
-            {/* Liquidity -> donut (top-right)
-                Path and circle color are correct (#c7c7cc) */}
             <path d="M800,55 L530,55 L530,100" stroke="#783981" strokeWidth="2" fill="none" />
             <circle cx="530" cy="100" r="6" fill="#783981" />
 
-            {/* Cex -> donut (bottom-right)
-                Path and circle color are correct (#6366f1) */}
+            
             <path d="M870,220 L615,220 L615,165" stroke="#2c30f6" strokeWidth="2" fill="none" />
             <circle cx="615" cy="165" r="6" fill="#2c30f6" />
           </svg>
 
-          {/* ===== CENTER DONUT CHART ===== */}
+          {/* CENTER DONUT CHART */}
           <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[230px] sm:w-[270px] md:w-[300px] aspect-square rounded-full border-4 border-white">
 
             <svg className="w-full h-full transform -rotate-90" viewBox="0 0 100 100">
@@ -99,12 +92,8 @@ export default function Tokenomics() {
             </div>
           </div>
 
-          {/* =========================================================================
-              DATA CALLOUT LABELS ( r_ghost + Text )
-              ========================================================================= */}
+          {/*  DATA CALLOUT LABELS ( r_ghost + Text ) */}
 
-          {/* Top Left Callout: PRESALE (30%)
-              Corrected circle color from "#1e3a8a" to "#06b6d4" to match segment */}
           <div className="absolute right-[78%] top-[8%] flex items-center gap-2 z-50" >
             <div className="text-left whitespace-nowrap">
               <p className="font-serif italic font-bold text-white text-[10px] sm:text-sm md:text-base leading-tight">Presale</p>
@@ -119,8 +108,6 @@ export default function Tokenomics() {
 </div>
           </div>
 
-          {/* Bottom Left Callout: BURNED (50%)
-              Corrected circle color from "#1e3a8a" to "#1e3a8a" to match segment */}
           <div className="absolute right-[78%] bottom-[10%] flex items-center gap-2 z-50">
             <div className="text-left whitespace-nowrap">
               <p className="font-serif italic font-bold text-white text-[10px] sm:text-sm md:text-base leading-tight">Burned</p>
@@ -135,8 +122,6 @@ export default function Tokenomics() {
 </div>
           </div>
 
-          {/* Top Right Callout: LIQUIDITY (5%)
-              Corrected circle color from "#1e3a8a" to "#c7c7cc" to match segment */}
           <div className="absolute left-[75%] top-[2%] flex items-center gap-2 z-50">
             {/* Added circle matching segment color */}
 <div className="w-32 sm:w-40 md:w-48 flex items-center justify-center -ml-1">  <img
@@ -151,8 +136,7 @@ export default function Tokenomics() {
             </div>
           </div>
 
-          {/* Mid Right Callout: CEX (15%)
-              Corrected circle color from "#1e3a8a" to "#6366f1" to match segment */}
+          
           <div className="absolute left-[82%] top-[35%] flex items-center gap-2 z-50">
             {/* Added circle matching segment color */}
 <div className="w-32 sm:w-40 md:w-48 flex items-center justify-center -ml-1">  <img
@@ -170,9 +154,7 @@ export default function Tokenomics() {
         </div>
       </section>
 
-      {/* =========================================================================
-          SECTION 2: SPOOKY WOODEN FOOTER SIGNBOARD
-          ========================================================================= */}
+      {/* SECTION 2: SPOOKY WOODEN FOOTER SIGNBOARD*/}
       <footer className="relative w-full bg-black pb-12 pt-4 px-4 flex flex-col items-center">
 
         <div className="relative w-full max-w-10xl aspect-[1100/500] sm:aspect-[1100/320] flex items-center justify-center">
@@ -235,9 +217,7 @@ export default function Tokenomics() {
 </div>
           </div>
 
-          {/* =========================================================================
-              FOREGROUND INTERACTIVE TEXT & COMMUNITY LINKS BLOCK
-              ========================================================================= */}
+          {/* FOREGROUND INTERACTIVE TEXT & COMMUNITY LINKS BLOCK */}
 <div className="relative z-10 w-full h-full flex flex-col items-center justify-center px-4 sm:px-8 md:px-12 pb-[4%] pt-[5%] text-center scale-75 sm:scale-90 md:scale-100">
             <h2 className="font-serif font-black text-amber-950 text-xl sm:text-3xl md:text-6xl tracking-wide">
               Following Us

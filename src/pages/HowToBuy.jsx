@@ -28,9 +28,7 @@ export default function HowToBuy() {
         {/* Active Elements Canvas */}
         <div className="absolute inset-0 z-10 w-full h-full text-[1vmin]">
 
-          {/* =========================================================
-              1️⃣ LEFT FRONT COUPLE (Active on Slide 6)
-             ========================================================= */}
+          {/* LEFT FRONT COUPLE (Active on Slide 6)*/}
           <div className="absolute bottom-[4%] left-[3%] w-[15%] aspect-[4/3] z-30">
             {/* Wooden Signs Layer */}
             {currentSlide === 6 && (
@@ -73,9 +71,7 @@ export default function HowToBuy() {
           </div>
 
 
-          {/* =========================================================
-              2️⃣ LEFT BACK COUPLE (Active on Slide 4)
-             ========================================================= */}
+          {/*  LEFT BACK COUPLE (Active on Slide 4)*/}
           <div className="absolute bottom-[16%] left-[26%] w-[11%] aspect-[4/3] z-20">
             {/* Wooden Signs Layer */}
             {currentSlide === 4 && (
@@ -105,9 +101,7 @@ export default function HowToBuy() {
           </div>
 
 
-          {/* =========================================================
-              3️⃣ RIGHT BACK COUPLE (Active on Slide\ 3)
-             ========================================================= */}
+          {/* RIGHT BACK COUPLE (Active on Slide\ 3)*/}
           <div className="absolute bottom-[14%] right-[44%] w-[11%] aspect-[4/3] z-10">
             {/* Wooden Signs Layer */}
             {currentSlide === 3 && (
@@ -137,9 +131,7 @@ export default function HowToBuy() {
           </div>
 
 
-          {/* =========================================================
-              4️⃣ RIGHT FRONT COUPLE (Active on Slide 5)
-             ========================================================= */}
+          {/* RIGHT FRONT COUPLE (Active on Slide 5)*/}
           <div className="absolute bottom-[6%] right-[5%] w-[14%] aspect-[4/3] z-30">
             {/* Wooden Signs Layer */}
             {currentSlide === 5 && (
@@ -169,9 +161,7 @@ export default function HowToBuy() {
           </div>
 
 
-          {/* =========================================================
-              DYNAMIC RESPONSIVE GHOST ROUTING ENGINE
-             ========================================================= */}
+          {/* DYNAMIC RESPONSIVE GHOST ROUTING ENGINE*/}
           
           {/* Slide 1: Welcome/Intro Ghost - Far down the road pathway */}
           {currentSlide === 1 && (

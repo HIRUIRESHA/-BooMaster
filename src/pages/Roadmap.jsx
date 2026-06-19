@@ -62,9 +62,8 @@ export default function Roadmap() {
     : "bottom-[10%] left-[25%]";
 
   return (
-<div className="w-full bg-black overflow-hidden select-none">
-<section className="relative w-full min-h-screen flex flex-col items-center justify-center overflow-hidden">        
-        {/* Fullscreen Base Layer Background Canvas */}
+      <div className="relative w-full bg-black overflow-hidden select-none z-10">
+<section className="relative w-full pt-16 pb-32 flex flex-col items-center justify-center overflow-hidden">        {/* Fullscreen Base Layer Background Canvas */}
         <img
           src={bg3Img}
           alt=""

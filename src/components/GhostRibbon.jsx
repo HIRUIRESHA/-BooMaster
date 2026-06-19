@@ -5,10 +5,7 @@ export default function GhostRibbon({ flip }) {
   const COUNT = 40;
 
   return (
-          <div className="w-full h-24 sm:h-32 md:h-40 lg:h-60 flex items-center overflow-hidden">
-
-
-      <div
+<div className="w-full h-24 sm:h-32 md:h-40 flex items-center overflow-visible bg-transparent pointer-events-none transform -translate-y-1/2">      <div
         className="flex whitespace-nowrap"
         style={{ animation: "marqueeReverse 40s linear infinite" }}
       >

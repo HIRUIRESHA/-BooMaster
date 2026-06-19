@@ -56,7 +56,7 @@ export default function FAQ() {
   };
 
   return (
-    <div className="relative w-full min-h-screen flex items-center justify-center select-none overflow-hidden py-24">
+    <div className="relative w-full min-h-screen flex items-center justify-center select-none overflow-hidden py-35">
       {/* Absolute Structural Wrapper Context */}
       <div className="relative w-full max-w-[1500px] px-4">
         

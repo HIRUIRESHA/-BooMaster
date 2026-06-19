@@ -5,11 +5,13 @@ import rGhostImg from "../assets/ghosts/r_ghost.png";
 import bigGhostImg from "../assets/ghosts/g7.png";
 import centerPumpkinImg from "../assets/s_pum.png";
 import footerPlankImg from "../assets/end.png";
-import icon9Img from "../assets/icons/icon9.png";
-import twitterImg from "../assets/icons/twitter.png";
 import animal1Img from "../assets/animal1.png";
 import animal3Img from "../assets/animal3.png";
 import animal2Img from "../assets/animal2.png";
+import telegramImg from "../assets/icons/telegram.png";
+import twitterImg from "../assets/icons/twitter.png";
+import etherscanImg from "../assets/icons/etherscan.png";
+import dextoolImg from "../assets/icons/dextool.png";
 
 export default function Tokenomics() {
   return (
@@ -241,51 +243,61 @@ export default function Tokenomics() {
               Following Us
             </h2>
 
-            <div className="flex items-center justify-center gap-3 sm:gap-4 mt-2 sm:mt-12">
+            <div className="flex items-center justify-center gap-3 sm:gap-6 mt-2 sm:mt-12">
 
-              {/* Telegram */}
-              <a
-                href="https://t.me/"
-                target="_blank"
-                rel="noreferrer"
-                className="w-7 h-7 sm:w-9 sm:h-9 rounded-full bg-[#111649] flex items-center justify-center transition-transform hover:scale-110 active:scale-95 shadow-md border border-white/5"
-              >
-                <img src={icon9Img} alt="Telegram" className="w-[55%] h-[55%] object-contain" />
-              </a>
+  {/* Telegram */}
+  <a
+    href="https://t.me/"
+    target="_blank"
+    rel="noreferrer"
+    className="transition-transform hover:scale-110 active:scale-95"
+  >
+    <img
+      src={telegramImg}
+      alt="Telegram"
+      className="w-10 sm:w-12 md:w-14 h-auto object-contain"
+    />
+  </a>
 
-              {/* Twitter / X */}
-              <a
-                href="https://x.com/"
-                target="_blank"
-                rel="noreferrer"
-                className="w-7 h-7 sm:w-9 sm:h-9 rounded-full bg-[#111649] flex items-center justify-center transition-transform hover:scale-110 active:scale-95 shadow-md border border-white/5"
-              >
-                <img src={twitterImg} alt="Twitter X" className="w-[50%] h-[50%] object-contain" />
-              </a>
+  {/* Twitter */}
+  <a
+    href="https://x.com/"
+    target="_blank"
+    rel="noreferrer"
+    className="transition-transform hover:scale-110 active:scale-95"
+  >
+    <img
+      src={twitterImg}
+      alt="Twitter"
+      className="w-10 sm:w-12 md:w-14 h-auto object-contain"
+    />
+  </a>
 
-              {/* DexScreener */}
-              <a
-                href="#dex"
-                className="w-7 h-7 sm:w-9 sm:h-9 rounded-full bg-[#111649] flex items-center justify-center transition-transform hover:scale-110 active:scale-95 shadow-md border border-white/5"
-              >
-                <div className="w-[50%] h-[50%] rounded-sm bg-white/80 transform rotate-45 flex items-center justify-center">
-                  <div className="w-2 h-2 bg-[#111649] rounded-full" />
-                </div>
-              </a>
+  {/* Etherscan */}
+  <a
+    href="#etherscan"
+    className="transition-transform hover:scale-110 active:scale-95"
+  >
+    <img
+      src={etherscanImg}
+      alt="Etherscan"
+      className="w-10 sm:w-12 md:w-14 h-auto object-contain"
+    />
+  </a>
 
-              {/* DEXTools */}
-              <a
-                href="#dextools"
-                className="w-7 h-7 sm:w-9 sm:h-9 rounded-full bg-[#111649] flex items-center justify-center transition-transform hover:scale-110 active:scale-95 shadow-md border border-white/5"
-              >
-                <div className="w-[55%] h-[55%] flex flex-col justify-between p-0.5">
-                  <div className="h-1 w-full bg-cyan-400 rounded-sm" />
-                  <div className="h-1 w-[75%] bg-white rounded-sm" />
-                  <div className="h-1 w-[50%] bg-white rounded-sm" />
-                </div>
-              </a>
+  {/* DEXTools */}
+  <a
+    href="#dextools"
+    className="transition-transform hover:scale-110 active:scale-95"
+  >
+    <img
+      src={dextoolImg}
+      alt="DEXTools"
+      className="w-10 sm:w-12 md:w-14 h-auto object-contain"
+    />
+  </a>
 
-            </div>
+</div>
 
             <p className="font-serif font-bold text-[20px] sm:text-xs text-amber-950/80 tracking-wider mt-3 sm:mt-12">
               © Copyright {new Date().getFullYear()} all right reserved by BooMaster

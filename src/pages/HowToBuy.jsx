@@ -1,10 +1,8 @@
 import React, { useState, useEffect } from "react";
 import bg4Img from "../assets/bg4.png";
-import bigPumpkinImg from "../assets/b_pum.png";
 import smallPumpkinImg from "../assets/s_pum.png";
 import ghostImg from "../assets/ghosts/ghost.png";
 import smallRoundImg from "../assets/s_round.png";
-import bigRoundImg from "../assets/b_round.png";
 
 export default function HowToBuy() {
   const [currentSlide, setCurrentSlide] = useState(1);
@@ -38,28 +36,38 @@ export default function HowToBuy() {
             {currentSlide === 6 && (
               <div className="absolute inset-0 z-0 pointer-events-none animate-float-mini">
                 {/* Big Board behind Big Pumpkin */}
-                <div className="absolute top-[-45%] left-[-25%] w-[95%] aspect-square rotate-[345deg]">
-                  <img src={bigRoundImg} className="w-full h-full object-contain" alt="Signboard" />
-                  <div className="absolute inset-[12%] flex items-start pt-[22%] justify-center px-[10%] text-center">
-                    <p className="font-serif font-bold text-[0.75vw] text-amber-950 leading-tight tracking-tight break-words px-0.5">
-                      Buy BooMaster
-                    </p>
-                  </div>
-                </div>
-                {/* Small Board behind Small Pumpkin */}
-                <div className="absolute top-[-25%] right-[-25%] w-[82%] aspect-square rotate-[15deg]">
-                  <img src={smallRoundImg} className="w-full h-full object-contain" alt="Signboard" />
-                  <div className="absolute inset-[12%] flex items-start pt-[22%] justify-center px-[10%] text-center">
-                    <p className="font-serif font-bold text-[0.65vw] text-amber-950 leading-tight tracking-tight break-words px-0.5">
-                      Buy BooMaster
-                    </p>
-                  </div>
-                </div>
+<div className="absolute top-[-45%] left-[-25%] w-[95%] aspect-square rotate-[345deg]">
+  <img src={smallRoundImg} className="w-full h-full object-contain" alt="Signboard" />
+  <div className="absolute inset-[12%] flex items-start pt-[22%] justify-center px-[10%] text-center">
+    <a 
+      href="https://your-dapp-or-exchange-link.com" 
+      target="_blank" 
+      rel="noopener noreferrer"
+      className="font-serif font-black text-[0.75vw] text-amber-950 leading-tight tracking-tight break-words px-0.5 hover:text-orange-600 transition-colors cursor-pointer pointer-events-auto"
+    >
+      Buy BooMaster
+    </a>
+  </div>
+</div>
+{/* Small Board behind Small Pumpkin */}
+<div className="absolute top-[-25%] right-[-25%] w-[82%] aspect-square rotate-[15deg]">
+  <img src={smallRoundImg} className="w-full h-full object-contain" alt="Signboard" />
+  <div className="absolute inset-[12%] flex items-start pt-[22%] justify-center px-[10%] text-center">
+    <a 
+      href="https://your-dapp-or-exchange-link.com" 
+      target="_blank" 
+      rel="noopener noreferrer"
+      className="font-serif font-black text-[0.65vw] text-amber-950 leading-tight tracking-tight break-words px-0.5 hover:text-orange-600 transition-colors cursor-pointer pointer-events-auto"
+    >
+      Buy BooMaster
+    </a>
+  </div>
+</div>
               </div>
             )}
             {/* Pumpkins Layer */}
             <div className="absolute inset-0 flex items-end z-10">
-              <img src={bigPumpkinImg} className="absolute left-0 bottom-0 w-[65%] h-auto z-10" alt="Big Pumpkin" />
+              <img src={smallPumpkinImg} className="absolute left-0 bottom-0 w-[65%] h-auto z-10" alt="Big Pumpkin" />
               <img src={smallPumpkinImg} className="absolute right-[5%] bottom-0 w-[45%] h-auto z-20" alt="Small Pumpkin" />
             </div>
           </div>
@@ -73,7 +81,7 @@ export default function HowToBuy() {
             {currentSlide === 4 && (
               <div className="absolute inset-0 z-0 pointer-events-none animate-float-mini">
                 <div className="absolute top-[-50%] left-[-15%] w-[98%] aspect-square rotate-[345deg]">
-                  <img src={bigRoundImg} className="w-full h-full object-contain" alt="Signboard" />
+                  <img src={smallRoundImg} className="w-full h-full object-contain" alt="Signboard" />
                   <div className="absolute inset-[12%] flex items-start pt-[12%] justify-center px-[10%] text-center">
                     <p className="font-serif font-bold text-[0.75vw] text-amber-950 leading-tight tracking-tight break-words">
                       Fund your wallet with eth/ usdt
@@ -91,7 +99,7 @@ export default function HowToBuy() {
               </div>
             )}
             <div className="absolute inset-0 flex items-end z-10">
-              <img src={bigPumpkinImg} className="absolute left-0 bottom-0 w-[65%] h-auto z-10" alt="Big Pumpkin" />
+              <img src={smallPumpkinImg} className="absolute left-0 bottom-0 w-[65%] h-auto z-10" alt="Big Pumpkin" />
               <img src={smallPumpkinImg} className="absolute right-[5%] bottom-0 w-[45%] h-auto z-20" alt="Small Pumpkin" />
             </div>
           </div>
@@ -105,7 +113,7 @@ export default function HowToBuy() {
             {currentSlide === 3 && (
               <div className="absolute inset-0 z-0 pointer-events-none animate-float-mini">
                 <div className="absolute top-[-50%] left-[-15%] w-[98%] aspect-square">
-                  <img src={bigRoundImg} className="w-full h-full object-contain" alt="Signboard" />
+                  <img src={smallRoundImg} className="w-full h-full object-contain" alt="Signboard" />
                   <div className="absolute inset-[12%] flex items-start pt-[12%] justify-center px-[10%] text-center">
                     <p className="font-serif font-bold text-[0.75vw] text-amber-950 leading-tight tracking-tight break-words">
                       Create a crypto wallet
@@ -123,7 +131,7 @@ export default function HowToBuy() {
               </div>
             )}
             <div className="absolute inset-0 flex items-end z-10">
-              <img src={bigPumpkinImg} className="absolute left-0 bottom-0 w-[65%] h-auto z-10" alt="Big Pumpkin" />
+              <img src={smallPumpkinImg} className="absolute left-0 bottom-0 w-[65%] h-auto z-10" alt="Big Pumpkin" />
               <img src={smallPumpkinImg} className="absolute right-[5%] bottom-0 w-[45%] h-auto z-20" alt="Small Pumpkin" />
             </div>
           </div>
@@ -137,7 +145,7 @@ export default function HowToBuy() {
             {currentSlide === 5 && (
               <div className="absolute inset-0 z-0 pointer-events-none animate-float-mini">
                 <div className="absolute top-[-45%] left-[-15%] w-[95%] aspect-square rotate-[15deg]">
-                  <img src={bigRoundImg} className="w-full h-full object-contain" alt="Signboard" />
+                  <img src={smallRoundImg} className="w-full h-full object-contain" alt="Signboard" />
                   <div className="absolute inset-[12%] flex items-start pt-[12%] justify-center px-[10%] text-center">
                     <p className="font-serif font-bold text-[0.75vw] text-amber-950 leading-tight tracking-tight break-words">
                       Connect to the BooMaster
@@ -155,7 +163,7 @@ export default function HowToBuy() {
               </div>
             )}
             <div className="absolute inset-0 flex items-end z-10">
-              <img src={bigPumpkinImg} className="absolute left-0 bottom-0 w-[65%] h-auto z-10" alt="Big Pumpkin" />
+              <img src={smallPumpkinImg} className="absolute left-0 bottom-0 w-[65%] h-auto z-10" alt="Big Pumpkin" />
               <img src={smallPumpkinImg} className="absolute right-[5%] bottom-0 w-[45%] h-auto z-20" alt="Small Pumpkin" />
             </div>
           </div>

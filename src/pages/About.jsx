@@ -2,7 +2,7 @@ import React from "react";
 
 // Asset imports mapping down perfectly into assets folder structure
 import bg2Img         from "../assets/bg2.png";
-import scrollGhostImg from "../assets/ghosts/ghost2.png"; // Updated path to ghost2.png
+import scrollGhostImg from "../assets/ghosts/ghostwletter.png"; // Updated path to ghost2.png
 import joinButtonGhostImg from "../assets/ghosts/ghost1.png";
 import letterImg      from "../assets/letter.png";
 import g7             from "../assets/ghosts/g7.png";
@@ -12,6 +12,7 @@ import g3             from "../assets/ghosts/g3.png";
 import g4             from "../assets/ghosts/g4.png";
 import g5             from "../assets/ghosts/g5.png";
 import g6             from "../assets/ghosts/g6.png";
+import eyeImg from "../assets/ghosts/eye.png";
 
 export default function About() {
   const ghostCards = [g1, g2, g3, g4, g5, g6];
@@ -46,14 +47,35 @@ export default function About() {
 
             {/* Floating Portal Join Button */}
             <div className="mt-0 ml-0 md:ml-60 relative inline-flex items-center justify-center group cursor-pointer select-none">
-              <div style={{ animation: "floatMini 2.5s ease-in-out infinite" }}>
-                <img
-                  src={joinButtonGhostImg}
-                  alt="Join Banner Character Link"
-                    className="w-40 sm:w-48 md:w-64 h-auto object-contain drop-shadow-[0_8px_20px_rgba(168,85,247,0.4)] transition-transform group-hover:scale-105"                />
-              </div>
-              <div className="absolute top-[38%] left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white text-zinc-900 px-4 py-1.5 rounded-md shadow-2xl flex items-center gap-1.5 whitespace-nowrap group-hover:shadow-[0_0_22px_rgba(147,51,234,0.55)] transition-all duration-200">
-                <span className="font-black text-[10px] md:text-xs uppercase tracking-wider">
+              <div
+  className="relative z-10"
+  style={{ animation: "floatMini 2.5s ease-in-out infinite" }}
+>
+  {/* Ghost */}
+  <img
+    src={joinButtonGhostImg}
+    alt="Join Banner Character Link"
+    className="w-40 sm:w-48 md:w-64 h-auto object-contain drop-shadow-[0_8px_20px_rgba(168,85,247,0.4)] transition-transform group-hover:scale-105"
+  />
+
+  {/* Eye */}
+  <img
+  src={eyeImg}
+  alt="Eye"
+  className="
+    absolute
+    top-[16%]
+    left-[50%]
+    w-[26%]
+    h-auto
+    z-[100]
+    -translate-x-1/2
+    -translate-y-1/2
+    pointer-events-none
+  "
+/>
+</div>
+<div className="absolute z-[200] top-[38%] left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white text-zinc-900 px-4 py-1.5 rounded-md shadow-2xl flex items-center gap-1.5 whitespace-nowrap group-hover:shadow-[0_0_22px_rgba(147,51,234,0.55)] transition-all duration-200">                <span className="font-black text-[10px] md:text-xs uppercase tracking-wider">
                   Join BooMaster
                 </span>
                 <span className="text-purple-700 font-bold text-xs">▶</span>
@@ -67,21 +89,7 @@ export default function About() {
                 className="relative w-[650px] h-[420px]"
                 style={{ animation: "floatSlow 4s ease-in-out infinite" }}
             >
-                {/* Large Letter */}
-                <img
-                src={letterImg}
-                alt="Letter Background"
-                className="
-                    absolute
-                    left-0
-                    top-12
-                    w-[430px]
-                    md:w-[530px]
-                    object-contain
-                    z-0
-                    pointer-events-none
-                "
-                />
+                
 
                 {/* Smaller Ghost */}
                 <img
@@ -92,8 +100,8 @@ export default function About() {
                     left-5
                     top-16
                     md:top-40
-                    w-[240px]
-                    md:w-[290px]
+                    w-[540px]
+                    md:w-[590px]
                     object-contain
                     z-10
 

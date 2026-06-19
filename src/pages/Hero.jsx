@@ -3,6 +3,7 @@ import bgImg from "../assets/home_bg.png";
 import middleGhostImg from "../assets/ghosts/ghost.png";
 import textBooImg from "../assets/boo.png";
 import slideGhostImg from "../assets/ghosts/ghost1.png";
+import eyeImg from "../assets/ghosts/eye.png";
 
 export default function Hero() {
   const [ghostGrown, setGhostGrown] = useState(false);
@@ -84,13 +85,31 @@ export default function Hero() {
         <div className="absolute bottom-28 right-4 sm:right-8 md:right-16 z-30">
           <button className="group relative flex items-center justify-center transition-transform duration-300 hover:scale-105 active:scale-95 focus:outline-none">
             
-            <div className="animate-float-mini">
-              <img 
-                src={slideGhostImg} 
-                alt="Action Ghost Holder" 
-                className="w-32 sm:w-40 md:w-48 h-auto object-contain drop-shadow-xl"
-              />
-            </div>
+            <div className="animate-float-mini relative">
+  {/* Ghost */}
+  <img
+    src={slideGhostImg}
+    alt="Action Ghost Holder"
+    className="w-32 sm:w-40 md:w-48 h-auto object-contain drop-shadow-xl"
+  />
+
+  {/* Eye */}
+  <img
+    src={eyeImg}
+    alt="Eye"
+    className="
+      absolute
+      top-[15%]
+      left-[50%]
+      w-[28%]
+      h-auto
+      z-[100]
+      -translate-x-1/2
+      -translate-y-1/2
+      pointer-events-none
+    "
+  />
+</div>
 
             {/* Pill Style Buy Action Label Box */}
             <div className="absolute top-[42%] left-[45%] -translate-x-1/2 -translate-y-1/2 bg-white text-black px-4 py-1.5 md:px-5 md:py-2 rounded-md shadow-2xl flex items-center gap-1.5 border border-purple-900/10 min-w-[120px] md:min-w-[155px] justify-center group-hover:shadow-[0_0_20px_rgba(168,85,247,0.4)] transition-shadow">
